@@ -1,0 +1,257 @@
+/* ===== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ФИЛЬМА ===== */
+
+/* Контейнер для страницы фильма */
+.film-page {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 100px auto 20px;
+  padding: 0 48px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.breadcrumbs a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumbs .separator {
+  margin: 0 8px;
+  color: var(--text-muted);
+}
+
+/* Рейтинг с звёздами */
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating-stars .stars {
+  color: var(--primary);
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.rating-stars .rating-value {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.rating-stars .rating-count {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Список актёров в сетке */
+.actors-grid-detailed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.actor-item {
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.actor-item:hover {
+  transform: translateY(-4px);
+}
+
+.actor-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border-color);
+  transition: var(--transition);
+  margin: 0 auto 8px;
+}
+
+.actor-item:hover img {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-neon);
+}
+
+.actor-item .actor-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.actor-item .actor-role {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Похожие фильмы */
+.similar-films {
+  margin-top: 40px;
+}
+
+.similar-films .grid {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.similar-films .card {
+  cursor: pointer;
+}
+
+.similar-films .card-poster {
+  height: 200px;
+}
+
+/* Кнопки действий */
+.film-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.film-actions .btn-neon {
+  padding: 12px 32px;
+  font-size: 14px;
+}
+
+.film-actions .btn-secondary {
+  background: var(--dark-card);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.film-actions .btn-secondary:hover {
+  background: var(--border-color);
+  color: var(--text-primary);
+  box-shadow: none;
+}
+
+/* Таблица с дополнительной информацией */
+.film-details-table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.film-details-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.film-details-table .label {
+  color: var(--text-muted);
+  font-weight: 500;
+  width: 140px;
+}
+
+.film-details-table .value {
+  color: var(--text-secondary);
+}
+
+/* Отзывы (заглушка) */
+.reviews-section {
+  margin-top: 40px;
+}
+
+.review-card {
+  background: var(--dark-card);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 16px;
+}
+
+.review-card .review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.review-card .review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.review-card .review-author {
+  font-weight: 600;
+}
+
+.review-card .review-date {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.review-card .review-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.review-card .review-rating {
+  color: var(--primary);
+  font-weight: 700;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: 0 20px;
+    margin-top: 80px;
+  }
+
+  .film-actions {
+    flex-direction: column;
+  }
+
+  .film-actions .btn-neon {
+    width: 100%;
+    text-align: center;
+  }
+
+  .actors-grid-detailed {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 12px;
+  }
+
+  .actor-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .similar-films .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .film-details-table td {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .film-details-table .label {
+    width: 100px;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КиноПортал — главная</title>
+  <meta name="description" content="КиноПортал — сайт о фильмах, популярных подборках, актёрах и рейтингах.">
+  <meta name="keywords" content="фильмы, кино, кинопортал, популярные фильмы, актёры">
+  <meta name="author" content="Ваше имя">
+  <meta name="theme-color" content="#ffb300">
+  <meta property="og:title" content="КиноПортал — главная">
+  <meta property="og:description" content="Сайт о фильмах, актёрах и популярных киноновинках.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/icon-512.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Хедер -->
+  <header class="header">
+    <div class="logo">✦ КиноПортал</div>
+    <nav class="nav">
+      <a href="index.html" class="active">Главная</a>
+      <a href="top250.html">Топ-250</a>
+      <a href="actors.html">Актёры</a>
+    </nav>
+  </header>
+
+  <!-- Герой -->
+  <section class="hero">
+    <h1>Добро пожаловать в КиноПортал</h1>
+    <p>Лучшие фильмы, актёры и рейтинги. Всё в одном месте.</p>
+    <a href="top250.html" class="btn-neon hero-btn">Смотреть Топ-250</a>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Контент -->
+  <section class="section">
+    <h2 class="section-title">🎬 Популярные <span>фильмы</span></h2>
+    <div class="grid">
+      <div class="card">
+        <img class="card-poster" src="b98bac7e-8d1a-48d7-9698-470936b210b2.png" alt="Побег из Шоушенка">
+        <div class="card-body">
+          <div class="card-title">Побег из Шоушенка</div>
+          <div class="card-meta">
+            <span class="card-genre">Драма</span>
+            <span class="card-rating">★ 9.3</span>
+          </div>
+          <a href="film.html" class="btn-neon">Подробнее</a>
+        </div>
+      </div>
+      <!-- Добавьте остальные карточки -->
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <p>© 2026 КиноПортал. Все права защищены.</p>
+  </footer>
+
+  <!-- Скрипт регистрации SW -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(error => {
+            console.log('SW registration failed: ', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>КиноПортал — информация о фильме</title>
+
+  <meta name="description" content="Страница с подробной информацией о фильме: описание, жанры, год выпуска, длительность, рейтинг и актёрский состав.">
+  <meta name="keywords" content="фильм, описание фильма, жанры, рейтинг фильма, актёры фильма">
+  <meta name="author" content="Ваше имя">
+  <meta name="theme-color" content="#ffb300">
+
+  <meta property="og:title" content="КиноПортал — информация о фильме">
+  <meta property="og:description" content="Описание фильма, рейтинг, жанры и актёрский состав.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/icon-512.png">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/images/favicon.png">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="film.css">
+</head>
+<body>
+  <!-- Контент страницы фильма -->
+  <header class="header">
+    <div class="logo">✦ КиноПортал</div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="top250.html">Топ-250</a>
+      <a href="actors.html">Актёры</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="film-container">
+      <div class="film-poster">
+        <img src="assets/images/posters/inception.jpg" alt="Начало">
+      </div>
+      <div class="film-info">
+        <h1>Начало (Inception)</h1>
+        <div class="film-meta">
+          <span class="year">2010</span>
+          <span class="duration">148 мин</span>
+          <span class="rating">★ 8.7</span>
+        </div>
+        <div class="film-genres">
+          <span class="genre">Фантастика</span>
+          <span class="genre">Боевик</span>
+          <span class="genre">Триллер</span>
+        </div>
+        <p class="film-description">
+          Кобб — талантливый вор, лучший из лучших в опасном искусстве извлечения: 
+          он крадёт ценные секреты из глубин подсознания во время сна. 
+          Его редкий дар сделал его ценным игроком в мире промышленного шпионажа, 
+          но он же превратил его в беглеца.
+        </p>
+        <div class="film-cast">
+          <h3>Актёрский состав:</h3>
+          <div class="actors-list">
+            <div class="actor-card">
+              <img src="assets/images/actors/dicaprio.jpg" alt="Леонардо ДиКаприо">
+              <span>Леонардо ДиКаприо</span>
+            </div>
+            <div class="actor-card">
+              <img src="assets/images/actors/gordon-levitt.jpg" alt="Джозеф Гордон-Левитт">
+              <span>Джозеф Гордон-Левитт</span>
+            </div>
+            <!-- Добавьте остальных актёров -->
+          </div>
+        </div>
+        <a href="#" class="btn-neon">▶ Смотреть трейлер</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 КиноПортал. Все права защищены.</p>
+  </footer>
+</body>
+</html>
